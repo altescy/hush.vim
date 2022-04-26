@@ -26,7 +26,7 @@ function! GetHushIndent()
   " 'function', 'if', 'for', 'while', 'repeat', 'else', '{'
   let ind = indent(prevlnum)
   let prevline = getline(prevlnum)
-  let midx = match(prevline, '^\s*\%(if\>\|for\>\|while\>\|repeat\>\|else\>\|do\>\|then\>\)')
+  let midx = match(prevline, '^\s*\%(if\>\|for\>\|while\>\|else\>\|do\>\|then\>\)')
   if midx == -1
     let midx = match(prevline, '{\s*$')
     if midx == -1
