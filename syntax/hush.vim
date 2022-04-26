@@ -17,7 +17,7 @@ syn region  hushCommandBlock  start="{" end="}" transparent fold
 syn region  hushFunctionBlock start="\<function\>" end="\<end\>" transparent fold
 syn region  hushBlock         start="\<do\>" end="\<end\>" transparent fold
 
-syn keyword hushTodo            contained TODO FIXME XXX
+syn keyword hushTodo          contained TODO FIXME XXX
 
 syn match   hushDecNumber     display "\<\d\+\>"
 syn match   hushFloat         display "\<\d\+\(\.\d\+\)\=\([eE]-\=\d*\)\=\>"
@@ -26,8 +26,8 @@ syn match   hushCharacter     "'[^']*'" contains=hushSpecialChar
 syn region  hushString        start=+"+ end=+"+ contains=hushSpecialChar,@Spell
 syn region  hushComment       start="#" end="$" keepend contains=hushCharacter,@Spell
 
-syn region hushIfThen         start="\<if\>" end="\<then\>"me=e-4 transparent nextgroup=hushThenEnd skipwhite skipempty
-syn region hushThenEnd        start="\<then\>" end="\<end\>" contained transparent
+syn region  hushIfThen        start="\<if\>" end="\<then\>"me=e-4 nextgroup=hushThenEnd transparent skipwhite skipempty
+syn region  hushThenEnd       start="\<then\>" end="\<end\>" contained transparent
 syn keyword hushElse          contained else
 syn keyword hushIn            contained in
 
