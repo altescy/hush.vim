@@ -23,7 +23,7 @@ syn match   hushDecNumber     display "\<\d\+\>"
 syn match   hushFloat         display "\<\d\+\(\.\d\+\)\=\([eE]-\=\d*\)\=\>"
 syn match   hushSpecialChar   contained +\\["\\'0abfnrtvx]+
 syn match   hushCharacter     "'[^']*'" contains=hushSpecialChar
-syn region  hushString        start=+"+ end=+"+ contains=hushSpecialChar,@Spell
+syn region  hushString        start=+"+ end=+"+ contains=hushSpecialChar,hushTodo,@Spell
 syn region  hushComment       start="#" end="$" keepend contains=hushCharacter,@Spell
 
 syn region  hushIfThen        start="\<if\>" end="\<then\>"me=e-4 nextgroup=hushThenEnd transparent skipwhite skipempty
@@ -41,5 +41,6 @@ hi def link hushSelf          Constant
 hi def link hushOperator      Operator
 hi def link hushConditional   Conditional
 hi def link hushMethod        Function
-hi def link hushComment       Comment
 hi def link hushException     Exception
+hi def link hushComment       Comment
+hi def link hushTodo          Todo
