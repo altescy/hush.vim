@@ -5,4 +5,4 @@
 
 [Hush](https://hush-shell.github.io/) syntax highlighting, indentation and more for Vim
 
-![screenshot](https://user-images.githubusercontent.com/16734471/165453022-24f558db-250c-4d6f-b941-524698b10e05.png)
+![screenshot](https://user-images.githubusercontent.com/16734471/165453431-6a88e10d-d0ac-47b1-acf3-797d8343c143.png)
