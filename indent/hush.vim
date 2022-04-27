@@ -23,7 +23,7 @@ function! GetHushIndent()
   endif
 
   " Add a 'shiftwidth' after lines that start a block:
-  " 'function', 'if', 'for', 'while', 'repeat', 'else', '{'
+  " 'function', 'if', 'for', 'while', 'else', '{'
   let ind = indent(prevlnum)
   let prevline = getline(prevlnum)
   let midx = match(prevline, '^\s*\%(if\>\|for\>\|while\>\|else\>\|do\>\|then\>\)')
@@ -36,8 +36,8 @@ function! GetHushIndent()
 
   if midx != -1
     " Add 'shiftwidth' if what we found previously is not in a comment and
-    " an "end" or "until" is not present on the same line.
-    if synIDattr(synID(prevlnum, midx + 1, 1), "name") != "hushComment" && prevline !~ '\<end\>\|\<until\>'
+    " an "end" is not present on the same line.
+    if synIDattr(synID(prevlnum, midx + 1, 1), "name") != "hushComment" && prevline !~ '\<end\>'
       let ind = ind + shiftwidth()
     endif
   endif
