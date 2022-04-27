@@ -40,6 +40,7 @@ hi def link hushKeyword       Keyword
 hi def link hushSelf          Constant
 hi def link hushOperator      Operator
 hi def link hushConditional   Conditional
+hi def link HushRepeat        Repeat
 hi def link hushMethod        Function
 hi def link hushException     Exception
 hi def link hushComment       Comment
