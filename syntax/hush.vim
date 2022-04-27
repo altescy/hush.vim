@@ -1,7 +1,7 @@
 syn keyword hushConditional   if else
 syn keyword HushRepeat        for while
 syn keyword hushOperator      and or not in
-syn keyword hushKeyword       break
+syn keyword hushStatement     return break
 syn keyword hushKeyword       then
 syn keyword hushKeyword       do
 syn keyword hushKeyword       end
@@ -41,6 +41,7 @@ hi def link hushSelf          Constant
 hi def link hushOperator      Operator
 hi def link hushConditional   Conditional
 hi def link HushRepeat        Repeat
+hi def link HushStatement     Statement
 hi def link hushMethod        Function
 hi def link hushException     Exception
 hi def link hushComment       Comment
